@@ -1,0 +1,168 @@
+Welcome To Agentic AI Training
+
+Hi I'm Theeba - Instructor
+
+Will start session by 9:30 AM IST
+
+============================================================================
+
+
+AI
+|
+TYpes
+|
+Ml- Dl - NN
+           |-- Transformer- " Attention is all you need"
+      |--Gen AI
+           |-- NLP - corpus--> sentences-> tokens  (Tokenization)
+                                             |
+                                            removing stopwords
+                                              |
+                                             Embedding  - Models
+                                               |
+                                               vector 
+
+		|---Agentic AI-- LLM + Tools(API/tool)
+
+
+
+    "hai"----> [0.1,......]- vector  
+
+Models--> Embedding Model--> vector creation- vector db
+      |--> LLM Model --->  Chatbot - prompt/query---> answer/response
+
+Manus- Agentic Ai- registered washing machine service
+============================================================================
+
+GenAI   VS Agentic Ai
+
+Architecture of Agentic AI
+
+chatbot  vs RAG vs Agent
+
+LLM
+====
+Models- (8b tokens,768 dim)--->vector structure 
+vector db- 8b tokens
+---------
+-- token , embedding vector, metadata - token ID
+-- hai, [0.23, ….]  
+---
+---what,[...]----->
+..
+8b
+
+"what is langchain"  --> [0.12,....],[0.33,0.0,3...]--> llm(semantic search)- [token Id[…], token Id[...]]--> relevant chunks--> response
+
+
+RAG
+===
+document--> embedding -> vector db
+
+==================================================================================
+
+Ollama Framework
+----------------
+C:\Users\Lenovo>ollama --version
+ollama version is 0.30.11
+
+C:\Users\Lenovo>ollama list
+NAME                       ID              SIZE      MODIFIED
+gemma2:2b                  8ccf136fdd52    1.6 GB    7 months ago
+gemma3:latest              a2af6cc3eb7f    3.3 GB    11 months ago
+gemma:2b                   b50d6c999e59    1.7 GB    11 months ago
+nomic-embed-text:latest    0a109f422b47    274 MB    11 months ago
+
+C:\Users\Lenovo>ollama pull <modelname>  #  download model
+
+C:\Users\Lenovo>ollama run <modelname>
+
+
+C:\Users\Lenovo>ollama run gemma2:2b
+>>> what is langchain?
+LangChain is a powerful, open-source framework designed to simplify the process of building applications powered
+by large language models (LLMs).
+
+Think of it as an **extended toolkit** for developers who want to leverage LLMs like ChatGPT, Bard, or other
+similar models.
+
+
+Embedding Model--768 dimension- features -
+"hai"--> 
+==========================================================================
+LLM
+|
+Langchain + LLM
+
+Application- db- APi calls- custom features - LLM- Storage --> Framework- langchain
+
+
+
+C:\Users\Lenovo>pip install langchain-ollama
+…..
+
+C:\Users\Lenovo>python
+Python 3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> from langchain_ollama import OllamaLLM
+>>> print(OllamaLLM)
+<class 'langchain_ollama.llms.OllamaLLM'>
+>>> llm_obj=OllamaLLM(model="gemma2:2b")
+>>> llm_obj.invoke('What is AI?')
+'Let\'s break down Artificial Intelligence (AI):\n\n**What is it?**\n\nImagine a computer program that can do things that normally require human intelligence. 
+..'
+
+-------------------------------------------------------------------------------
+
+Groq
+------
+
+Your Application
+|
+Groq Cloud API
+|
+Llama/ deepseek / Mistral/ Gemma
+|
+AI Response
+
+
+from langchain_groq
+------------------
+
+consider 
+user query + system message + chat history + retrieved doc = 3,500 tokens
+
+model- 4090 context window
+
+=======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                             
